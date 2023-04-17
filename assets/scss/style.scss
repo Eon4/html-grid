@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  border: solid 1px red;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: grid;
+  background-color: lightblue;
+  grid-template-rows: auto 1fr auto;
+  max-width: 1200px;
+  margin: auto;
+  main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 1rem;
+    div {
+      aspect-ratio: 2/1;
+      object-fit: cover;
+    }
+  }
+
+  header {
+    background-color: red;
+  }
+  footer {
+    background-color: blue;
+  }
+}
